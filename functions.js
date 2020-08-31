@@ -2,62 +2,64 @@
 //Estruturas de repetição
 //Escopo
 
-const alunos = [
+const student = [
   {
-    nome: "Artur",
+    name: "Artur",
     nota: 8.8,
   },
   {
-    nome: "Fernanda",
+    name: "Fernanda",
     nota: 3,
   },
   {
-    nome: "Maria",
+    name: "Maria",
     nota: 5,
   },
   {
-    nome: "Petra",
+    name: "Petra",
     nota: 8,
   },
 ];
 
-const alunos2 = [
+const student2 = [
   {
-    nome: "Pedro",
+    name: "Pedro",
     nota: 9.8,
   },
   {
-    nome: "Carla",
+    name: "Carla",
     nota: 6,
   },
   {
-    nome: "Silvia",
+    name: "Silvia",
     nota: 5,
   },
   {
-    nome: "João",
+    name: "João",
     nota: 5,
   },
 ];
 
-function calculaMedia(alunos) {
+function calculaMedia(student) {
   let soma = 0;
-  for (let i = 0; i < alunos.length; i++) {
-    soma = soma + alunos[i].nota;
+  for (let i = 0; i < student.length; i++) {
+    soma = soma + student[i].nota;
   }
-  const media = soma / alunos.length;
+  const media = soma / student.length;
   return media;
 }
-const media1 = calculaMedia(alunos);
-const media2 = calculaMedia(alunos2);
+const media1 = calculaMedia(student);
+const media2 = calculaMedia(student2);
 
-function enviaMensagem(media, turma) {
+function sendMessage(media, class) {
   if (media > 6) {
-    console.log(`A media da turma ${turma} foi ${media}.`);
+    console.log(`A media da classe ${class} foi ${media}.`);
   } else {
-    console.log(`A média da turma ${turma} foi menor que 6`);
+    console.log(`A média da classe ${class} foi menor que 6`);
   }
 }
 
-enviaMensagem(media1, "TurmaA");
-enviaMensagem(media2, "TurmaB");
+sendMessage(media1, "classA");
+sendMessage(media2, "classB");
+
+
